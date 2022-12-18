@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Early Detection of Primary Breast Cancer from Gene Expression Micoarray Data</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='GeneBreastCancer.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Early Detection of Primary Breast Cancer</span></h2><br>
+            <div class='description'>
+    			<p>(Based on Gene Expression Microarray Data.)</p><br>
+    			<p> <a href="#"></a></p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+            <!-- Prediction Form -->
+            <div class="ml-container">
+    		  <form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="Mitogen-activated protein kinase 1" placeholder="MAPK-1 Range:6.000000000-9.00000000" required="required"><br>
+                <input class="form-input" type="text" name="APOBEC3B" placeholder="APOBEC3B Range: 4.000000000-8.00000000" required="required"><br>
+                <input class="form-input" type="text" name="ENAH" placeholder="ENAH Range: 4.000000000-11.00000000" required="required"><br>
+                <input type="submit" class="my-cta-button" value="Predict">
+        	  </form>
+    	    </div>
+
+            <!-- IPL Banner - 1 -->
+            <div class='ipl-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+                        <!-- Image-1 -->
+                        <div class="results">
+
+				<h1><span class='danger'>{{ prediction }}</span></h1>
+
+
+		</div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+           
+
+            
+        </div>
+
+        <!-- Footer -->
+        <div class='footer'>
+           <div class="contact">
+               <p class='footer-description'><b> <a href="http://fcitr.rb.kau.edu.sa/"style="color:white">A Novel Hybrid FS framework to screen Potential Gene Biomarkers for Early Detection of Primary Breast Cancer, work funded by Deanship of Scientific Research (DSR), King Abdulaziz University, Jeddah</a></b></p>
+              
+           </div>
+           <p class='footer-description'><b>This app made by <a href="https://scholar.google.com/citations?user=JvYr4c4AAAAJ&hl=en&oi=ao"style="color:white">Tabrej Khan </a>and <a href="https://scholar.google.com/citations?user=ki5_hZoAAAAJ&hl=en"style="color:white">Dr. Syed Asif Hassan.</a></b></p>
+       </div>
+
+    </body>
+</html>
